@@ -1,0 +1,9 @@
+version: 1
+  type: pipeline-template
+
+  name: My Test Template
+  description: Template Demo
+  parameters:
+    - name: test_message
+      type: string
+      displayName: Message to display when the pipeline runs

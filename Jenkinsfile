@@ -1,11 +1,14 @@
 pipeline {
-    agent { label 'linux' }
+    agent {
+      kubernetes {
+        label "centos-7-pod-template"
+      }
+    }
 
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World!!!'
-                publishEvent simpleEvent('helloWorld')
+                echo 'Hello World'
             }
         }
     }

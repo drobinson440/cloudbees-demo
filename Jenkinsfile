@@ -39,7 +39,7 @@ pipeline {
     stage('Hello') {
       steps {
         container('centos7') {
-          sh 'Running on centos7'
+          echo 'Running on centos7'
         }
       }
     }

@@ -9,13 +9,14 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World!'
+                echo 'Pod Template created in UI'
             }
         }
     }
 }
 */
 
+/*
 pipeline {
   agent {
     kubernetes {
@@ -39,8 +40,25 @@ pipeline {
     stage('Hello') {
       steps {
         container('centos7') {
-          echo 'Running on centos7'
+          echo 'YAML within Jenkinsfile example'
         }
+      }
+    }
+  }
+}
+*/
+
+pipeline {
+  agent {
+    kubernetes {
+      defaultContainer 'centos7'
+      yaml libraryResource('podTemplates/centos7.yaml')
+    }
+  }
+  stages {
+    stage('Hello') {
+      steps {
+        echo 'Shared library example'
       }
     }
   }

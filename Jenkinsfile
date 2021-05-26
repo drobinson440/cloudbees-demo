@@ -52,7 +52,7 @@ pipeline {
   agent {
     kubernetes {
       defaultContainer 'centos7'
-      yaml libraryResource('podTemplates/centos7.yaml')
+      yamlFile libraryResource('podTemplates/centos7.yaml')
     }
   }
   stages {

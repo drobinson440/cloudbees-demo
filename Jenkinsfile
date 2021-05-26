@@ -16,7 +16,6 @@ pipeline {
 }
 */
 
-/*
 pipeline {
   agent {
     kubernetes {
@@ -46,8 +45,8 @@ pipeline {
     }
   }
 }
-*/
 
+/*
 pipeline {
   agent {
     kubernetes {
@@ -63,3 +62,4 @@ pipeline {
     }
   }
 }
+*/

@@ -1,10 +1,10 @@
 pipeline {
-    agent {
-      kubernetes {
-        label "centos-7-pod-template"
-      }
+  agent {
+    kubernetes {
+      defaultContainer 'centos7'
+      yamlFile 'podTemplates/centos7.yaml'
     }
-
+  }
     stages {
         stage('Hello') {
             steps {

@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+      kubernetes {
+        label "centos-7-pod-template"
+      }
+    }
 
     stages {
         stage('Hello') {

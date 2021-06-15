@@ -57,7 +57,7 @@ pipeline {
   stages {
     stage('Hello') {
       steps {
-        echo 'External YAML example'
+        echo 'External YAML example.'
       }
     }
   }

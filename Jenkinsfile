@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Pod Template created in UI..'
+                echo 'Pod Template created in UI...'
             }
         }
     }
